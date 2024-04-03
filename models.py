@@ -18,24 +18,3 @@ class Episodes(db.Model):
             'colors': json.loads(self.colors) if self.colors else [],
             'subjects': json.loads(self.subjects) if self.subjects else []
             }
-
-# class Colors(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     colors = db.Column(db.String(120), nullable=False)
-#     episode_id = db.Column(db.Integer, db.ForeignKey('episodes.id'), nullable=False)
-
-#     def to_dict(self):
-#         return {
-#             'colors': json.loads(self.colors)
-#             }
-
-# class Subjects(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     painting_index = db.Column(db.Integer, nullable=False)
-#     subjects = db.Column(db.String(120), nullable=False)
-
-#     def to_dict(self):
-#         return {
-#             # 'id': self.id,
-#             'subjects': json.loads(self.subjects)
-#             }
