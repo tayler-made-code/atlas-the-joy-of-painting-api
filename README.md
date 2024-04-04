@@ -32,17 +32,19 @@ The following API endpoints are available:
 - `GET /subjects/exactly/<path:subjects>`: Retrieves episodes that cover exactly the specified subjects.
 - `GET /colors/exactly/<path:colors>/subjects/exactly/<path:subjects>`: Retrieves episodes that use exactly the specified colors and cover exactly the specified subjects.
 
-## Data Model
+## Database Schema
+
+![Database Schema UML](data/UML.png)
 
 The application uses a SQLAlchemy-based database model with the following schema:
 
 - `Episodes` table:
-  - `id`: Unique identifier for the episode.
-  - `title`: Title of the episode.
-  - `date`: Date the episode aired.
-  - `description`: Description or notes about the episode if there are any.
-  - `colors`: JSON-encoded list of colors used in the episode.
-  - `subjects`: JSON-encoded list of subject matters covered in the episode.
+  - `id`: Unique identifier for the episode
+  - `title`: Title of the episode
+  - `date`: Date the episode aired
+  - `description`: Description or notes about the episode if there are any
+  - `colors`: JSON-encoded list of colors used in the episode
+  - `subjects`: JSON-encoded list of subject matters covered in the episode
 
 ## Installation and Setup
 
